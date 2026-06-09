@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anshul Wadhwani — CEO & Entrepreneur</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --deep: #0d0d0d;
+    --green: #1a7a3c;
+    --green-bright: #22a050;
+    --green-glow: #2ecc71;
+    --green-light: #c8f5d8;
+    --gold: #c8a96e;
+    --white: #f5f5f0;
+    --muted: #8a8a8a;
+    --border: rgba(34,160,80,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.6rem 4rem;
+    backdrop-filter: blur(20px);
+    background: rgba(10,10,10,0.85);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--white);
+  }
+  .nav-logo span { color: var(--green-bright); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--green-glow); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 70% 50%, rgba(26,122,60,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 85% 20%, rgba(46,204,113,0.06) 0%, transparent 50%);
+  }
+  .hero-lines {
+    position: absolute; inset: 0; overflow: hidden; opacity: 0.07;
+  }
+  .hero-lines::before {
+    content: '';
+    position: absolute;
+    width: 1px; height: 120%;
+    background: linear-gradient(to bottom, transparent, var(--green-bright), transparent);
+    left: 35%; top: -10%;
+    animation: lineScan 8s ease-in-out infinite;
+  }
+  .hero-lines::after {
+    content: '';
+    position: absolute;
+    width: 1px; height: 120%;
+    background: linear-gradient(to bottom, transparent, var(--green-bright), transparent);
+    left: 65%; top: -10%;
+    animation: lineScan 8s ease-in-out infinite 4s;
+  }
+  @keyframes lineScan {
+    0%, 100% { opacity: 0; transform: translateY(-20%); }
+    50% { opacity: 1; transform: translateY(20%); }
+  }
+
+  .hero-content { position: relative; z-index: 1; max-width: 900px; }
+  .hero-eyebrow {
+    font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--green-bright); margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 40px; height: 1px;
+    background: var(--green-bright);
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(4rem, 8vw, 7.5rem);
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--green-bright);
+    font-weight: 300;
+  }
+  .hero-title-last {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(4rem, 8vw, 7.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--white);
+  }
+  .hero-desc {
+    margin-top: 2.5rem;
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 520px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+  .hero-desc strong { color: var(--green-light); font-weight: 400; }
+  .hero-cta {
+    margin-top: 3rem;
+    display: flex; gap: 1.2rem; flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn-primary {
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2.4rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--green-bright); transform: translateY(-2px); }
+  .btn-outline {
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 1rem 2.4rem;
+    font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.3s, color 0.3s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--green-bright); color: var(--green-bright); }
+  .hero-scroll {
+    position: absolute; bottom: 3rem; right: 4rem;
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted);
+    writing-mode: vertical-rl;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .hero-scroll::after {
+    content: '';
+    width: 1px; height: 60px;
+    background: linear-gradient(to bottom, var(--muted), transparent);
+  }
+
+  /* STATS BAR */
+  .stats-bar {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    background: rgba(26,122,60,0.04);
+  }
+  .stat-item { text-align: center; }
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 600;
+    color: var(--green-bright);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); margin-top: 0.5rem;
+  }
+
+  /* SECTIONS */
+  section { padding: 7rem 4rem; }
+  .section-label {
+    font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--green-bright); margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-label::before { content: ''; width: 30px; height: 1px; background: var(--green-bright); }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  h2 em { font-style: italic; color: var(--green-bright); }
+
+  /* VENTURES */
+  .ventures-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    margin-top: 4rem;
+    background: var(--border);
+  }
+  .venture-card {
+    background: var(--deep);
+    padding: 3rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s;
+    cursor: none;
+  }
+  .venture-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--green-bright);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: left;
+  }
+  .venture-card:hover { background: #111; }
+  .venture-card:hover::before { transform: scaleX(1); }
+  .venture-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    color: var(--green-bright);
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+  }
+  .venture-icon {
+    width: 52px; height: 52px;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+    color: var(--green-bright);
+    transition: border-color 0.4s;
+  }
+  .venture-card:hover .venture-icon { border-color: var(--green-bright); }
+  .venture-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+  }
+  .venture-type {
+    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--green-bright);
+    margin-bottom: 1.2rem;
+  }
+  .venture-desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+  .venture-tags {
+    margin-top: 2rem;
+    display: flex; flex-wrap: wrap; gap: 0.6rem;
+  }
+  .tag {
+    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+    border: 1px solid rgba(34,160,80,0.25);
+    color: var(--green-light);
+    padding: 0.35rem 0.8rem;
+  }
+
+  /* SERVICES */
+  .services-section { background: #0c0c0c; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin-top: 4rem;
+    background: var(--border);
+  }
+  .service-item {
+    background: var(--deep);
+    padding: 2.5rem;
+    display: flex; gap: 1.8rem;
+    align-items: flex-start;
+    transition: background 0.3s;
+    cursor: none;
+  }
+  .service-item:hover { background: #0f0f0f; }
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; font-weight: 300;
+    color: rgba(34,160,80,0.25);
+    line-height: 1;
+    flex-shrink: 0;
+    padding-top: 0.2rem;
+  }
+  .service-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem; font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+  .service-content p {
+    font-size: 0.88rem; color: var(--muted);
+    line-height: 1.75; font-weight: 300;
+  }
+
+  /* ABOUT */
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 6rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-box {
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, #0f1f14, #0a0a0a);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .about-box::before {
+    content: 'AW';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11rem; font-weight: 700;
+    color: rgba(34,160,80,0.06);
+    position: absolute;
+    bottom: -1rem; right: -1rem;
+    line-height: 1;
+  }
+  .about-box-inner {
+    position: absolute; inset: 2rem;
+    border: 1px solid rgba(34,160,80,0.1);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1rem;
+  }
+  .about-initials {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem; font-weight: 300;
+    color: var(--green-bright);
+    line-height: 1;
+  }
+  .about-tagline {
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); text-align: center;
+  }
+  .about-accent {
+    position: absolute;
+    bottom: -1.5rem; right: -1.5rem;
+    width: 120px; height: 120px;
+    border: 1px solid var(--green-bright);
+    opacity: 0.3;
+  }
+  .about-text h2 { margin-bottom: 2rem; }
+  .about-text p {
+    font-size: 1rem; color: var(--muted); line-height: 1.85;
+    margin-bottom: 1.4rem; font-weight: 300;
+  }
+  .about-text p strong { color: var(--white); font-weight: 400; }
+  .about-text p em { color: var(--green-light); font-style: normal; }
+  .about-highlights {
+    margin-top: 2.5rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .highlight-item {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1.2rem 1.4rem;
+    border-left: 2px solid var(--green);
+    background: rgba(26,122,60,0.05);
+  }
+  .highlight-item span { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+  .highlight-item strong { color: var(--white); font-weight: 400; }
+
+  /* LOCATION */
+  .location-band {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 2rem 4rem;
+    display: flex; align-items: center; justify-content: center;
+    gap: 3rem;
+    background: rgba(26,122,60,0.03);
+    flex-wrap: wrap;
+  }
+  .loc-item {
+    font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted);
+    display: flex; align-items: center; gap: 0.7rem;
+  }
+  .loc-item::before {
+    content: '●'; font-size: 0.5rem; color: var(--green-bright);
+  }
+
+  /* CONTACT */
+  .contact-section { background: #090909; }
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-top: 4rem;
+  }
+  .contact-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem; font-weight: 300;
+    line-height: 1.2; margin-bottom: 1.5rem;
+  }
+  .contact-info h3 em { color: var(--green-bright); font-style: italic; }
+  .contact-info p { color: var(--muted); font-size: 0.95rem; line-height: 1.8; }
+  .contact-details {
+    margin-top: 2.5rem;
+    display: flex; flex-direction: column; gap: 1.2rem;
+  }
+  .contact-row {
+    display: flex; align-items: center; gap: 1rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-row-label {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--green-bright); width: 80px; flex-shrink: 0;
+  }
+  .contact-row-val {
+    font-size: 0.92rem; color: var(--white); font-weight: 300;
+  }
+  .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-label {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  input, textarea {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 0.9rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; font-weight: 300;
+    outline: none;
+    transition: border-color 0.3s;
+    resize: none;
+  }
+  input:focus, textarea:focus { border-color: var(--green-bright); }
+  input::placeholder, textarea::placeholder { color: #444; }
+
+  /* FOOTER */
+  footer {
+    padding: 2.5rem 4rem;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; color: var(--white);
+  }
+  .footer-logo span { color: var(--green-bright); }
+  .footer-copy {
+    font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em;
+  }
+  .footer-tagline {
+    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--green-bright);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow { animation: fadeUp 0.8s ease forwards; }
+  h1 { animation: fadeUp 0.8s ease 0.15s both; }
+  .hero-title-last { animation: fadeUp 0.8s ease 0.25s both; }
+  .hero-desc { animation: fadeUp 0.8s ease 0.35s both; }
+  .hero-cta { animation: fadeUp 0.8s ease 0.45s both; }
+
+  /* FLOATING SOCIAL BUTTONS */
+  .floating-social {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    pointer-events: none; /* container doesn't block, children do */
+  }
+  .floating-social a {
+    pointer-events: auto;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35), 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s cubic-bezier(.2,.8,.2,1),
+                box-shadow 0.3s ease,
+                filter 0.3s ease;
+    animation: floatY 3.2s ease-in-out infinite;
+    will-change: transform;
+    isolation: isolate;
+    outline: none;
+  }
+  .floating-social a:focus-visible {
+    box-shadow: 0 0 0 3px rgba(245,245,240,0.6), 0 10px 25px rgba(0,0,0,0.35);
+  }
+  .floating-social a::after {
+    /* subtle outer glow */
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(14px);
+    opacity: 0.55;
+    transition: opacity 0.3s ease;
+  }
+  .floating-social a:hover,
+  .floating-social a:focus-visible {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45), 0 6px 14px rgba(0,0,0,0.25);
+  }
+  .floating-social a:hover::after,
+  .floating-social a:focus-visible::after {
+    opacity: 0.9;
+  }
+  .floating-social a svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+    fill: #ffffff;
+  }
+
+  /* WhatsApp button */
+  .social-whatsapp {
+    background-color: #25D366;
+    background-image: linear-gradient(135deg, #25D366 0%, #1ebe5b 100%);
+  }
+  .social-whatsapp::after {
+    background: radial-gradient(circle, rgba(37,211,102,0.7) 0%, rgba(37,211,102,0) 70%);
+  }
+
+  /* Instagram button (official gradient) */
+  .social-instagram {
+    background:
+      radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-color: #d6249f;
+  }
+  .social-instagram::after {
+    background: radial-gradient(circle, rgba(214,36,159,0.7) 0%, rgba(214,36,159,0) 70%);
+  }
+
+  /* Gentle floating animation - WhatsApp slightly offset for life */
+  @keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+  .social-instagram { animation-delay: 0.4s; }
+  /* On hover/focus the float animation is overridden by the hover transform - that's intentional. */
+
+  /* Tooltip */
+  .floating-social a .tooltip {
+    position: absolute;
+    right: calc(100% + 14px);
+    top: 50%;
+    transform: translateY(-50%) translateX(8px);
+    background: rgba(15,15,15,0.95);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+  .floating-social a .tooltip::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    background: rgba(15,15,15,0.95);
+    border-right: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+  }
+  .floating-social a:hover .tooltip,
+  .floating-social a:focus-visible .tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  /* Mobile / tablet tuning */
+  @media (max-width: 600px) {
+    .floating-social {
+      right: 1rem;
+      bottom: 1rem;
+      gap: 0.7rem;
+    }
+    .floating-social a {
+      width: 50px;
+      height: 50px;
+    }
+    .floating-social a svg {
+      width: 24px;
+      height: 24px;
+    }
+    .floating-social a .tooltip { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .floating-social a { animation: none; }
+    .floating-social a, .floating-social a .tooltip { transition: none; }
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--green); }
+
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; }
+    section, .hero { padding: 5rem 1.5rem; }
+    .hero { padding-top: 8rem; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 2rem 1.5rem; }
+    .ventures-grid, .services-grid { grid-template-columns: 1fr; }
+    .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .about-visual { display: none; }
+    .footer { padding: 2rem 1.5rem; }
+    .location-band { padding: 1.5rem; gap: 1.5rem; }
+    h1, .hero-title-last { font-size: 3.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Anshul <span>Wadhwani</span></div>
+  <ul class="nav-links">
+    <li><a href="#ventures">Ventures</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">CEO &amp; Serial Entrepreneur — Raipur, Chhattisgarh</div>
+    <h1>Anshul <em>Wadhwani</em></h1>
+    <div class="hero-title-last">Building Empires.</div>
+    <p class="hero-desc">
+      Founder of <strong>3 thriving businesses</strong> — from wholesale celebrations to elite event planning and <em>cutting-edge digital marketing</em>. Turning visions into ventures, one industry at a time.
+    </p>
+    <div class="hero-cta">
+      <a href="tel:+919039477826" class="btn-primary">📞 +91 90394 77826</a>
+      <a href="#contact" class="btn-outline">Let's Connect</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-number">3</div>
+    <div class="stat-label">Business Ventures</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">#1</div>
+    <div class="stat-label">Event Planners in Raipur</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">360°</div>
+    <div class="stat-label">Marketing Solutions</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">∞</div>
+    <div class="stat-label">Growth Potential</div>
+  </div>
+</div>
+
+<!-- VENTURES -->
+<section id="ventures">
+  <div class="section-label">Portfolio</div>
+  <h2>Three <em>Ventures</em>,<br>One Vision</h2>
+  <div class="ventures-grid">
+
+    <div class="venture-card">
+      <div class="venture-num">01</div>
+      <div class="venture-icon">🎁</div>
+      <div class="venture-name">Thank U Shopee</div>
+      <div class="venture-type">Wholesale Distribution</div>
+      <p class="venture-desc">
+        Raipur's premier wholesale hub for birthday and decoration items. Supplying retailers and event professionals with the finest selection of celebration essentials at unbeatable prices.
+      </p>
+      <div class="venture-tags">
+        <span class="tag">Wholesale</span>
+        <span class="tag">Birthday Items</span>
+        <span class="tag">Decoration</span>
+        <span class="tag">B2B Supply</span>
+      </div>
+    </div>
+
+    <div class="venture-card">
+      <div class="venture-num">02</div>
+      <div class="venture-icon">🎈</div>
+      <div class="venture-name">Balloons Unlimited Raipur</div>
+      <div class="venture-type">Retail Franchise · Event Planning</div>
+      <p class="venture-desc">
+        Chhattisgarh's best event planners. From intimate celebrations to grand occasions, we transform spaces into unforgettable experiences. A retail franchise synonymous with creativity and joy.
+      </p>
+      <div class="venture-tags">
+        <span class="tag">Event Planning</span>
+        <span class="tag">Retail</span>
+        <span class="tag">Franchise</span>
+        <span class="tag">Decor</span>
+      </div>
+    </div>
+
+    <div class="venture-card">
+      <div class="venture-num">03</div>
+      <div class="venture-icon">🚀</div>
+      <div class="venture-name">Business Titans 360</div>
+      <div class="venture-type">Digital Marketing · Automation</div>
+      <p class="venture-desc">
+        A full-spectrum marketing agency engineered for growth. From brand strategy to business automation — we help clients dominate online, scale faster, and operate smarter in the digital age.
+      </p>
+      <div class="venture-tags">
+        <span class="tag">Marketing</span>
+        <span class="tag">Automation</span>
+        <span class="tag">Branding</span>
+        <span class="tag">Growth</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services-section">
+  <div class="section-label">What We Offer</div>
+  <h2>Services That <em>Scale</em></h2>
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-num">01</div>
+      <div class="service-content">
+        <h3>Wholesale Supply Chain</h3>
+        <p>Bulk procurement and distribution of birthday, decoration, and event items. Reliable supply for retailers, event planners, and businesses across Chhattisgarh.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">02</div>
+      <div class="service-content">
+        <h3>Event Planning &amp; Decoration</h3>
+        <p>End-to-end event management from concept to cleanup. Birthdays, corporate events, weddings, themed parties — crafted with passion and executed with perfection.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">03</div>
+      <div class="service-content">
+        <h3>Digital Marketing</h3>
+        <p>Strategic online marketing including social media management, content creation, SEO, paid ads, and brand building that drives real measurable results for your business.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">04</div>
+      <div class="service-content">
+        <h3>Business Automation</h3>
+        <p>Transform your operations with intelligent automation systems. From lead generation to customer follow-up — streamline workflows so your business runs efficiently 24/7.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">05</div>
+      <div class="service-content">
+        <h3>Franchise &amp; Retail Solutions</h3>
+        <p>Proven franchise models for event and balloon retail. Expand your entrepreneurial footprint with a system tested and refined in one of India's fastest-growing markets.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">06</div>
+      <div class="service-content">
+        <h3>Brand Strategy &amp; Consulting</h3>
+        <p>Positioning, identity, and growth consulting for businesses ready to level up. Leverage cross-industry insight from a CEO who has built and scaled multiple ventures simultaneously.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-visual">
+      <div class="about-box">
+        <div class="about-box-inner">
+          <div class="about-initials">AW</div>
+          <div class="about-tagline">CEO · Entrepreneur<br>Raipur, India</div>
+        </div>
+      </div>
+      <div class="about-accent"></div>
+    </div>
+    <div class="about-text">
+      <div class="section-label">The Visionary</div>
+      <h2>Who Is <em>Anshul</em>?</h2>
+      <p>
+        A driven entrepreneur from <strong>Raipur, Chhattisgarh</strong>, Anshul Wadhwani has built not one — but three successful business ventures across distinctly different industries.
+      </p>
+      <p>
+        His ability to simultaneously lead a <em>wholesale distribution empire</em>, the region's top event planning brand, and a high-performance digital marketing agency speaks to an extraordinary capacity for leadership, systems thinking, and execution.
+      </p>
+      <p>
+        Anshul believes in the power of <strong>building ecosystems, not just businesses</strong> — where each venture complements the other, creating a resilient and unstoppable commercial force.
+      </p>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <span>🏆 <strong>Best Event Planners in Raipur</strong> — Balloons Unlimited has earned its reputation as the go-to celebration specialists in Chhattisgarh.</span>
+        </div>
+        <div class="highlight-item">
+          <span>⚡ <strong>Full-Stack Business Builder</strong> — From supply chain to digital growth and automation, Anshul covers the entire business spectrum.</span>
+        </div>
+        <div class="highlight-item">
+          <span>🌐 <strong>Digital-First Vision</strong> — Business Titans 360 brings world-class marketing and automation to businesses across India.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION BAND -->
+<div class="location-band">
+  <div class="loc-item">Raipur, Chhattisgarh</div>
+  <div class="loc-item">Central India</div>
+  <div class="loc-item">Thank U Shopee — Wholesale</div>
+  <div class="loc-item">Balloons Unlimited — Events</div>
+  <div class="loc-item">Business Titans 360 — Marketing</div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-label">Get In Touch</div>
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3>Ready to <em>Grow</em><br>Together?</h3>
+      <p>Whether you're looking for wholesale supplies, world-class event planning, or a marketing partner to scale your business — let's talk.</p>
+      <div class="contact-details">
+        <div class="contact-row">
+          <div class="contact-row-label">Phone</div>
+          <div class="contact-row-val"><a href="tel:+919039477826" style="color: var(--green-bright); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--green-glow)'" onmouseout="this.style.color='var(--green-bright)'">+91 90394 77826</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-label">Founder</div>
+          <div class="contact-row-val">Anshul Wadhwani</div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-label">Location</div>
+          <div class="contact-row-val">Raipur, Chhattisgarh, India</div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-label">Venture 1</div>
+          <div class="contact-row-val">Thank U Shopee — Wholesale</div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-label">Venture 2</div>
+          <div class="contact-row-val">Balloons Unlimited Raipur</div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-label">Venture 3</div>
+          <div class="contact-row-val">Business Titans 360</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-group">
+        <label class="form-label">Your Name</label>
+        <input type="text" placeholder="Enter your full name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email / Phone</label>
+        <input type="text" placeholder="Your contact details">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Enquiry Type</label>
+        <input type="text" placeholder="Wholesale / Events / Marketing / Automation">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea rows="5" placeholder="Tell me about your requirements…"></textarea>
+      </div>
+      <a href="#" class="btn-primary" style="text-align:center;">Send Message</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Anshul <span>Wadhwani</span></div>
+  <div class="footer-tagline">Built to Last · Built to Lead</div>
+  <div class="footer-copy">© 2025 Anshul Wadhwani. All Rights Reserved.</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.venture-card, .service-item, .stat-item, .highlight-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+
+  // Counter animation for stats
+  function animateCounter(el, target, suffix = '') {
+    let start = 0;
+    const dur = 1800;
+    const step = timestamp => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / dur, 1);
+      const val = Math.floor(progress * target);
+      if (typeof target === 'number') el.textContent = val + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  const statsObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const nums = entry.target.querySelectorAll('.stat-number');
+        nums.forEach(n => {
+          const txt = n.textContent;
+          if (txt === '3') animateCounter(n, 3);
+          else if (txt === '#1') { /* keep as is */ }
+        });
+        statsObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
+  const sb = document.querySelector('.stats-bar');
+  if (sb) statsObserver.observe(sb);
+</script>
+
+<!-- FLOATING SOCIAL MEDIA BUTTONS -->
+<div class="floating-social" aria-label="Quick contact and social links">
+
+  <!-- WhatsApp -->
+  <a href="https://web.whatsapp.com"
+     class="social-whatsapp"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp (opens in a new tab)"
+     title="Chat on WhatsApp">
+    <span class="tooltip" role="tooltip">Chat on WhatsApp</span>
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.99 2.722.99.918 0 2.15-.515 2.563-1.318.13-.243.187-.573.187-.846 0-.27-.1-.487-.387-.7-.373-.286-1.532-.787-1.832-.787zM16.027 6.5c-5.247 0-9.5 4.253-9.5 9.5 0 1.738.47 3.42 1.36 4.88L6.5 26.5l5.79-1.36a9.45 9.45 0 0 0 3.737.776h.003c5.247 0 9.5-4.253 9.5-9.5 0-2.54-.99-4.93-2.787-6.726A9.456 9.456 0 0 0 16.027 6.5zm0 17.2h-.003a7.67 7.67 0 0 1-3.493-.83l-.25-.13-3.43.806.82-3.34-.16-.255a7.71 7.71 0 1 1 14.286-4.041 7.72 7.72 0 0 1-7.77 7.79z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/raipurdhoommachao/"
+     class="social-instagram"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Follow us on Instagram (opens in a new tab)"
+     title="Follow us on Instagram">
+    <span class="tooltip" role="tooltip">Follow us on Instagram</span>
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path d="M16 7.4c2.83 0 3.17.01 4.28.06 1.04.05 1.6.22 1.97.37.5.19.85.42 1.22.79.37.37.6.72.79 1.22.15.37.32.93.37 1.97.05 1.11.06 1.45.06 4.28s-.01 3.17-.06 4.28c-.05 1.04-.22 1.6-.37 1.97-.19.5-.42.85-.79 1.22-.37.37-.72.6-1.22.79-.37.15-.93.32-1.97.37-1.11.05-1.45.06-4.28.06s-3.17-.01-4.28-.06c-1.04-.05-1.6-.22-1.97-.37a3.27 3.27 0 0 1-1.22-.79 3.27 3.27 0 0 1-.79-1.22c-.15-.37-.32-.93-.37-1.97C7.41 19.17 7.4 18.83 7.4 16s.01-3.17.06-4.28c.05-1.04.22-1.6.37-1.97.19-.5.42-.85.79-1.22.37-.37.72-.6 1.22-.79.37-.15.93-.32 1.97-.37C12.83 7.41 13.17 7.4 16 7.4zm0-2.1c-2.87 0-3.23.01-4.36.06-1.13.05-1.9.23-2.58.5a5.2 5.2 0 0 0-1.88 1.22A5.2 5.2 0 0 0 5.96 8.96c-.27.68-.45 1.45-.5 2.58C5.41 12.67 5.4 13.03 5.4 15.9s.01 3.23.06 4.36c.05 1.13.23 1.9.5 2.58.27.69.64 1.28 1.22 1.88.6.58 1.19.95 1.88 1.22.68.27 1.45.45 2.58.5 1.13.05 1.49.06 4.36.06s3.23-.01 4.36-.06c1.13-.05 1.9-.23 2.58-.5a5.2 5.2 0 0 0 1.88-1.22 5.2 5.2 0 0 0 1.22-1.88c.27-.68.45-1.45.5-2.58.05-1.13.06-1.49.06-4.36s-.01-3.23-.06-4.36c-.05-1.13-.23-1.9-.5-2.58a5.2 5.2 0 0 0-1.22-1.88A5.2 5.2 0 0 0 22.94 5.86c-.68-.27-1.45-.45-2.58-.5C19.23 5.31 18.87 5.3 16 5.3zm0 3.65a7.05 7.05 0 1 0 0 14.1 7.05 7.05 0 0 0 0-14.1zm0 11.62a4.57 4.57 0 1 1 0-9.14 4.57 4.57 0 0 1 0 9.14zm5.9-11.85a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3z"/>
+    </svg>
+  </a>
+
+</div>
+
+<script>
+  // Floating social buttons - light enhancement script
+  (function () {
+    // Respect reduced motion: pause floating animation
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Pause animation when tab is hidden to save CPU
+    document.addEventListener('visibilitychange', function () {
+      const buttons = document.querySelectorAll('.floating-social a');
+      buttons.forEach(function (btn) {
+        btn.style.animationPlayState = document.hidden ? 'paused' : 'running';
+      });
+    });
+
+    // Smooth ripple-free click feedback: temporarily disable hover transform during click
+    document.querySelectorAll('.floating-social a').forEach(function (btn) {
+      btn.addEventListener('pointerdown', function () {
+        btn.style.transition = 'transform 0.12s ease, box-shadow 0.12s ease';
+        btn.style.transform = 'scale(0.94)';
+      });
+      ['pointerup', 'pointerleave', 'blur'].forEach(function (ev) {
+        btn.addEventListener(ev, function () {
+          btn.style.transition = '';
+          btn.style.transform = '';
+        });
+      });
+    });
+
+    if (reduceMotion) {
+      document.querySelectorAll('.floating-social a').forEach(function (btn) {
+        btn.style.animation = 'none';
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
